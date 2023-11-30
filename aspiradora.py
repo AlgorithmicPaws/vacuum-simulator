@@ -241,12 +241,15 @@ while True:
                         aspiradora.carga -= 40
                         charge_label.set_text(f'Carga: {aspiradora.carga}')
                         habitacion.limpiar_habitacion()
-                    if aspiradora.carga <= 20:  # Example condition for low battery
-                        state_label.set_text(f'Estado: Bateria baja, regresando')
                     habitacion1.liberar_habitacion()
                     habitacion2.liberar_habitacion()
                     habitacion3.liberar_habitacion()
-                    habitacion4.liberar_habitacion()
+                    habitacion4.liberar_habitacion()   
+                    
+                     
+        if aspiradora.carga <= 20:  # Example condition for low battery
+            state_label.set_text(f'Estado: Bateria baja, regresando')
+                    
 
         # Determinar el color de la habitación basado en su estado
         color = (200, 200, 200) if habitacion.limpio else (210, 180, 140)  # Gris si está limpio, marrón claro si no
